@@ -1,0 +1,19 @@
+# Project
+node_modules/
+test/**/*.js.map
+test/**/*.d.ts
+lib/**/*.js
+lib/**/*.js.map
+lib/**/*.d.ts
+test/samples/originals
+test/_test-issues.ts
+
+#IntelliJ IDEA:
+.idea
+*.iml
+
+# Yarn:
+yarn.lock
+.pnp.*
+.yarn
+yarn-error.log

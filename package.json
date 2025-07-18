@@ -1,0 +1,66 @@
+{
+  "name": "@music-metadata/icy",
+  "version": "0.1.0",
+  "description": "Parses ICY metadata from a web stream",
+  "license": "MIT",
+  "author": {
+    "name": "Borewit",
+    "url": "https://github.com/Borewit"
+  },
+  "type": "module",
+  "exports": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib/**/*.js",
+    "lib/**/*.d.ts"
+  ],
+  "dependencies": {
+    "debug": "^4.4.1",
+    "strtok3": "^10.3.2",
+    "token-types": "^6.0.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.1.2",
+    "@types/chai": "^5.2.2",
+    "@types/debug": "^4.1.12",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.0.14",
+    "chai": "^5.2.1",
+    "del-cli": "^6.0.0",
+    "mocha": "^11.7.1",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "clean": "del-cli lib/**/*.js lib/**/*.js.map lib/**/*.d.ts",
+    "compile": "tsc -p lib",
+    "lint": "biome check --error-on-warnings",
+    "test": "mocha",
+    "build": "npm run clean && npm run compile",
+    "prepublishOnly": "npm run build",
+    "update-biome": "npm install --save-dev --save-exact @biomejs/biome && npx @biomejs/biome migrate --write"
+  },
+  "keywords": [
+    "ICY",
+    "Icecast",
+    "Shoutcast",
+    "streaming",
+    "internet radio",
+    "radio stream",
+    "audio stream",
+    "metadata",
+    "stream metadata",
+    "ICY metadata",
+    "now playing",
+    "MP3",
+    "Ogg",
+    "FLAC",
+    "aac",
+    "live audio",
+    "music metadata",
+    "tokenizer",
+    "strtok3",
+    "media",
+    "audio"
+  ],
+  "repository": "github:Borewit/music-metadata-icy"
+}
