@@ -1,6 +1,6 @@
 [![Node.js CI](https://github.com/Borewit/music-metadata-icy/actions/workflows/nodejs-ci.yml/badge.svg)](https://github.com/Borewit/music-metadata-icy/actions/workflows/nodejs-ci.yml)
-[![NPM version](https://img.shields.io/npm/v/@music-metadata/icy.svg)](https://npmjs.org/package/@music-metadata/icy)
-[![npm downloads](http://img.shields.io/npm/dm/@music-metadata/icy.svg)](https://npmcharts.com/compare/@music-metadata/icy?start=365)
+[![NPM version](https://img.shields.io/npm/v/@music-metadata%2Ficy.svg)](https://npmjs.org/package/@music-metadata/icy)
+[![npm downloads](http://img.shields.io/npm/dm/@music-metadata%2Ficy.svg)](https://npmcharts.com/compare/@music-metadata%2Ficy?start=365)
 
 # @music-metadata/icy
 
