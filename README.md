@@ -26,6 +26,12 @@ yarn add @music-metadata/icy
 
 ---
 
+## Demo
+
+[![icy-radio-stream-player.png](images/icy-radio-stream-player.png)](https://icy-radio-stream-player.netlify.app/)
+
+---
+
 ## 📦 Usage
 
 ```ts
@@ -83,6 +89,7 @@ Process a fetch-compatible HTTP response and extract ICY metadata on the fly.
   }
 }
 ```
+
 
 ---
 
