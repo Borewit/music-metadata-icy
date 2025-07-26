@@ -167,6 +167,40 @@ If `Icy-Metaint` is not provided by the server, the module attempts to **auto-de
 
 ---
 
+## 🧭 How It Works
+
+The following diagram shows how `@music-metadata/icy` fits into a web-based ICY audio streaming pipeline, parsing interleaved metadata while passing clean audio through to playback:
+
+```mermaid
+graph TD
+  %% Node Styles
+  style A fill:#bbf,stroke:#333,stroke-width:2px
+  style B fill:#ddf,stroke:#333,stroke-width:2px
+  style C fill:#afa,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5
+  style D fill:#ffe4b3,stroke:#333,stroke-width:2px
+  style E fill:#fcc,stroke:#333,stroke-width:2px,stroke-dasharray: 3 3
+  style F fill:#fcf,stroke:#333,stroke-width:2px
+  style G fill:#cff,stroke:#333,stroke-width:2px,stroke-dasharray: 2 4
+
+  %% Nodes
+  A["🎧 ICY Web Stream<br/>(Icecast via Fetch)"]
+  B["🔀 Fetch with<br/>ICY-MetaData Header"]
+  C["🧩 @music-metadata/icy<br/>(ICY Parser)"]
+  D["🔁 Decoded Audio Stream"]
+  E["🎵 HTML5 Audio<br/>&lt;audio&gt; Element"]
+  F["🛰️ ICY Metadata Events"]
+  G["🖥️ Metadata Display<br/>in React UI"]
+
+  %% Flow
+  A --> B
+  B -->|ICY Interleaved Audio| C
+  C -->|Audio Stream| D
+  D --> E
+  C -->|Metadata Events| F
+  F -->|Track Info etc.| G
+```
+---
+
 ## 📄 License
 
 MIT — see [LICENSE.txt](LICENSE.txt) for full text.
