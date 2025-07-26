@@ -1,6 +1,6 @@
 {
   "name": "@music-metadata/icy",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Parses ICY metadata from a web stream",
   "license": "MIT",
   "author": {
