@@ -1,4 +1,4 @@
-import { decodeIcyStreamChunks, parseIcyResponse } from '../lib/index.js';
+import { parseIcyResponse } from '../lib/index.js';
 import { assert } from 'chai';
 
 /**
@@ -34,9 +34,8 @@ describe('@music-metadata/icy', function () {
     const receivedMetadata = [];
     let receivedAudioBytes = 0;
 
-    const audioStream = parseIcyResponse(response, metadata => {
-      console.log('ICY metadata:', Object.fromEntries(metadata));
-      receivedMetadata.push(metadata);
+    const audioStream = parseIcyResponse(response, update => {
+      receivedMetadata.push(update);
     });
 
     const reader = audioStream.getReader();
@@ -62,11 +61,8 @@ describe('@music-metadata/icy', function () {
     assert.isNotEmpty(receivedMetadata, 'Should receive at least one ICY metadata update');
 
     const firstMeta = receivedMetadata[0];
-    assert.instanceOf(firstMeta, Map, 'Metadata should be a Map');
-    assert.isTrue(firstMeta.has('StreamTitle'), 'Metadata should include StreamTitle');
-
-    const title = firstMeta.get('StreamTitle');
-    assert.isString(title, 'StreamTitle should be a string');
-    assert.match(title, /.+/, 'StreamTitle should not be empty');
+    assert.isObject(firstMeta.metadata, 'Metadata should be a Map');
+    assert.isString(firstMeta.metadata.StreamTitle, 'Metadata should include StreamTitle');
+    assert.match(firstMeta.metadata.StreamTitle, /.+/, 'StreamTitle should not be empty');
   });
 });

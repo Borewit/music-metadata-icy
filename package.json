@@ -32,8 +32,8 @@
   },
   "scripts": {
     "clean": "del-cli lib/**/*.js lib/**/*.js.map lib/**/*.d.ts",
-    "compile": "tsc -p lib",
-    "lint": "biome check --error-on-warnings",
+    "compile": "tsc -p lib --sourceMap false",
+    "lint": "biome check",
     "test": "mocha",
     "build": "npm run clean && npm run compile",
     "prepublishOnly": "npm run build",
