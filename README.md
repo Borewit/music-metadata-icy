@@ -26,6 +26,12 @@ yarn add @music-metadata/icy
 
 ---
 
+## Demo
+
+* [ICY Radio Stream Player](https://github.com/Borewit/icy-radio-stream-player)
+
+---
+
 ## 📦 Usage
 
 ```ts
@@ -83,6 +89,7 @@ Process a fetch-compatible HTTP response and extract ICY metadata on the fly.
   }
 }
 ```
+
 
 ---
 
