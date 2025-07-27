@@ -48,4 +48,4 @@ template: |
   $CHANGES
 
   ## NPM release
-  NPM release: [$REPOSITORY@$RESOLVED_VERSION](https://www.npmjs.com/package/$REPOSITORY/v/$RESOLVED_VERSION)
+  NPM release: [@music-metadata/icy@$RESOLVED_VERSION](https://www.npmjs.com/package/@music-metadata/icy/v/$RESOLVED_VERSION)
