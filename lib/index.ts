@@ -190,10 +190,11 @@ export function decodeIcyStreamChunks(
 				controller.close();
 			}
 		},
-		async cancel(reason) {
+		cancel(reason) {
 			debug(`Stream cancelled: ${reason}`);
 			try {
-				await tokenizer.close?.(); // Close tokenizer if it supports close()
+				return tokenizer.close?.()
+					.then(() => icyStream.cancel());
 			} catch (err) {
 				debug(`Error during tokenizer cleanup: ${(err as Error)?.message ?? err}`);
 			}
