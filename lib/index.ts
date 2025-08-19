@@ -4,7 +4,7 @@ import initDebug from 'debug';
 
 import type {ReadableStream as NodeWebReadableStream} from 'node:stream/web';
 
-const debug = initDebug('music-metadata:icy');
+const debug = initDebug('music-metadata-icy');
 
 function cleanString(str: string): string {
 	return str.replace(/\0+$/, '').trim();
