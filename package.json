@@ -15,7 +15,7 @@
     "lib/**/*.d.ts"
   ],
   "dependencies": {
-    "debug": "^4.4.1",
+    "debug": "^4.4.3",
     "strtok3": "^10.3.2",
     "token-types": "^6.0.3"
   },
