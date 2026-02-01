@@ -28,7 +28,7 @@
     "chai": "^5.2.1",
     "del-cli": "^6.0.0",
     "mocha": "^11.7.1",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3"
   },
   "scripts": {
     "clean": "del-cli lib/**/*.js lib/**/*.js.map lib/**/*.d.ts",
